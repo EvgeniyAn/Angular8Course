@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'BasicAndSyntax';
+  title = 'Basic1';
+  number = 41;
+  arr = [1, 2, 3];
+  obj = {a1: 1, b1: 2, c1: {a2: 2}};
+
+  constructor() {
+
+  }
 }
