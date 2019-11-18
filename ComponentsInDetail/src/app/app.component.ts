@@ -13,22 +13,21 @@ export interface Post {
 })
 export class AppComponent implements OnInit {
   posts: Post[] = [
-    {id: 1, title: 'Post 1', text: 'Some text 1'}
-    // {id: 2, title: 'Post 2', text: 'Some text 2'},
-    // {id: 3, title: 'Post 3', text: 'Some text 3'}
+    {id: 1, title: 'Post 1', text: 'Some text 1'},
+    {id: 2, title: 'Post 2', text: 'Some text 2'},
+    {id: 3, title: 'Post 3', text: 'Some text 3'}
   ];
 
   ngOnInit(): void {
-    setTimeout(() => {
-      console.log('Timeout')
-      //this.posts[0].title = 'Changed!'; //не работает если ChangeDetectionStrategy.OnPush
-      this.posts[0] = {
-        title: 'changed',
-        text: 'chnaged 2',
-        id: 33
-      };
-
-    }, 5000);
+    // setTimeout(() => {
+    //   console.log('Timeout')
+    //   //this.posts[0].title = 'Changed!'; //не работает если ChangeDetectionStrategy.OnPush
+    //   this.posts[0] = {
+    //     title: 'changed',
+    //     text: 'chnaged 2',
+    //     id: 33
+    //   };
+    // }, 5000);
   }
 
   updatePosts(post: Post) {
