@@ -1,10 +1,21 @@
 <div>Hello from App Component</div>
 <br>
 <button (click)="backgroundToggle = !backgroundToggle">Toggle</button>
-<div [ngStyle]="{
-  width: '200px',
-  height: '200px',
-  borderRadius: '5px',
-  border: '1px solid gray',
-  background: backgroundToggle ? 'red' : 'blue'
-}"></div>
+<!--<div [ngStyle]="{-->
+<!--  width: '200px',-->
+<!--  height: '200px',-->
+<!--  borderRadius: '5px',-->
+<!--  border: '1px solid gray',-->
+<!--  background: backgroundToggle ? 'red' : 'blue'-->
+<!--}"></div>-->
+
+<!--<p [ngClass]="{-->
+<!--  red: backgroundToggle === true,-->
+<!--  blue: !backgroundToggle-->
+<!--}" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, nam?</p>-->
+
+<p
+  [class.red]="backgroundToggle"
+  [class.blue]="!backgroundToggle"
+
+>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, voluptates.</p>
