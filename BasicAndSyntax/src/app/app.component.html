@@ -1,26 +1,10 @@
 <div>Hello from App Component</div>
-<br>
-
+<!--<input-->
+<!--  type="text"-->
+<!--  [value]="title"-->
+<!--  (input)="onInput($event)"-->
+<!--&gt;-->
 <input
-  type="text"
-  [placeholder]="title"
-  (keyup.enter)="onInputChange($event)"
-  (blur)="onBlur(myInput.value)"
-  #myInput
+  [(ngModel)]="title"
 >
-<p><strong>{{inputValue}}</strong></p>
-
-
-<!--<p>{{ title }}</p>-->
-<!--<p>{{ number }}</p>-->
-<!--<p>{{ arr }}</p>-->
-<!--<p>{{ obj.c1.a2 }}</p>-->
-<!--<br>-->
-<!--<br>-->
-<!--<app-post></app-post>-->
-<!--<br>-->
-<!--<br>-->
-<!--<app-post></app-post>-->
-<!--<br>-->
-<!--<br>-->
-<!--<app-post4></app-post4>-->
+<p>{{title}}</p>
