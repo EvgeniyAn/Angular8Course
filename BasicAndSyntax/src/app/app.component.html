@@ -1,10 +1,10 @@
 <div>Hello from App Component</div>
-<!--<input-->
-<!--  type="text"-->
-<!--  [value]="title"-->
-<!--  (input)="onInput($event)"-->
-<!--&gt;-->
-<input
-  [(ngModel)]="title"
->
-<p>{{title}}</p>
+<br>
+<button (click)="backgroundToggle = !backgroundToggle">Toggle</button>
+<div [ngStyle]="{
+  width: '200px',
+  height: '200px',
+  borderRadius: '5px',
+  border: '1px solid gray',
+  background: backgroundToggle ? 'red' : 'blue'
+}"></div>
