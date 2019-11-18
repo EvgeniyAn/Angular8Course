@@ -1,10 +1,14 @@
 <div>Hello from App Component</div>
 <br>
 
-<input type="text" placeholder="text">
-<p><strong>
-
-</strong></p>
+<input
+  type="text"
+  [placeholder]="title"
+  (keyup.enter)="onInputChange($event)"
+  (blur)="onBlur(myInput.value)"
+  #myInput
+>
+<p><strong>{{inputValue}}</strong></p>
 
 
 <!--<p>{{ title }}</p>-->
