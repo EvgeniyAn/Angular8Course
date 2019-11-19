@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="view-row">
+    <app-viewforms [result]="resultView.resultValue"></app-viewforms>
+  </div>
+  <div class="panel-container">
+    <div class="btn-row" *ngFor="let symbol of symbols">
+      <app-numberpannel *ngFor="let s of symbol" [symbol]="s" (onAdd)="onBtnClick($event)"></app-numberpannel>
+    </div>
+  </div>
+</div>
