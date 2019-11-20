@@ -33,7 +33,7 @@ export class ResultView implements IResultView {
   }
 
   private static isNumeric(str: string): boolean {
-    return /^\d+$/.test(str);
+    return /^\d*(?:\.)*(?:\d+)$/.test(str);
   }
 
   private refreshResultView(): void {
@@ -60,7 +60,12 @@ export class ResultView implements IResultView {
       this.calc();
       this.add(symbol, true);
     } else {
-      this.digits.push(symbol);
+      if (ResultView.isNumeric(this.digits[this.digits.length - 1])) {
+        this.digits.push(symbol);
+      }else{
+        this.digits.pop();
+        this.digits.push(symbol);
+      }
     }
     this.refreshResultView();
   }
