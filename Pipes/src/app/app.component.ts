@@ -8,5 +8,6 @@ import {Component} from '@angular/core';
 export class AppComponent {
   e:number = Math.E;
   str = 'hello world';
+  date: Date = new Date();
 
 }

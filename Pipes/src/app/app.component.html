@@ -10,9 +10,19 @@
   <!--  <p>-->
   <!--    {{e | number:'1.0-0'  }}-->
   <!--  </p>-->
-  <p>{{str | uppercase}}</p>
-  <p>{{str | uppercase | lowercase}}</p>
-  <p>{{str | titlecase}}</p>
-  <p>{{str | slice:1:5 }}</p>
-  <p>{{str | slice:1:-2 }}</p>
+
+<!--  <p>{{str | uppercase}}</p>-->
+<!--  <p>{{str | uppercase | lowercase}}</p>-->
+<!--  <p>{{str | titlecase}}</p>-->
+<!--  <p>{{str | slice:1:5 }}</p>-->
+<!--  <p>{{str | slice:1:-2 }}</p>-->
+
+  <p>{{date}}</p>
+  <p>{{date | date}}</p>
+  <p>{{date | date: 'fullDate'}}</p>
+  <p>{{date | date: 'long'}}</p>
+  <p>{{date | date: 'dd MMMM yyyy'}}</p>
+  <p>{{date | date: 'MMMM dd, yyyy'}}</p>
+  <p>{{date | date: 'MMMM dd, yyyy HH:mm:ss'}}</p>
+
 </div>
