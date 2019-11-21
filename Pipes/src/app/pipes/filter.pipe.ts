@@ -2,7 +2,8 @@ import {Pipe, PipeTransform} from '@angular/core';
 import {Post} from "../../../../ComponentsInDetail/src/app/app.component";
 
 @Pipe({
-  name: 'filter'
+  name: 'filter',
+  pure: false
 })
 export class FilterPipe implements PipeTransform {
 
