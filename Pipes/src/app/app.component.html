@@ -42,17 +42,24 @@
   <!--  <p>{{ 'Hello world     ' }}</p>-->
   <!--  <p>{{ 'Hello world     ' | exMarks }}</p>-->
 
-  <button class="btn" (click)="searchField = 'title'">Title</button>
-  <button class="btn" (click)="searchField = 'text'">Text</button>
-  <hr>
+  <!--  <button class="btn" (click)="searchField = 'title'">Title</button>-->
+  <!--  <button class="btn" (click)="searchField = 'text'">Text</button>-->
+  <!--  <hr>-->
 
-  <button class="btn" (click)="addPost()">Add Posts</button>
+  <!--  <button class="btn" (click)="addPost()">Add Posts</button>-->
 
-  <input type="text" [(ngModel)]="search">
+  <!--  <input type="text" [(ngModel)]="search">-->
 
-  <div *ngFor="let post of posts | filter:search:searchField" class="card">
-    <h2>{{post.title}}</h2>
-    <p>{{post.text}}</p>
-  </div>
+  <!--  <div *ngFor="let post of posts | filter:search:searchField" class="card">-->
+  <!--    <h2>{{post.title}}</h2>-->
+  <!--    <p>{{post.text}}</p>-->
+  <!--  </div>-->
+
+  <p> Wait for it... {{p | async}}</p>
+
+  <p>Date: {{date$ | async}}</p>
+  <p>Date: {{date$ | async | date: 'HH:mm:ss yyyy'}}</p>
+
+  <p>Date: {{date | date: 'HH:mm:ss yyyy'}}</p>
 
 </div>
