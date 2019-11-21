@@ -33,4 +33,11 @@ export class AppComponent {
   ];
   search: string;
   searchField = 'title';
+
+  addPost() {
+    this.posts.unshift({
+      title:'Angular 8',
+      text:'Angular 8 course'
+    })
+  }
 }
