@@ -1,5 +1,10 @@
 <div class="container">
-  <h1>RxJS Intro</h1>
+  <h1>Angular services</h1>
 
+  <div class="card">
+    <h2>App counter: {{appCounterService.counter}}</h2>
+    <button class="btn" (click)="appCounterService.increase()">Plus</button>
+    <button class="btn" (click)="appCounterService.decrease()">Minus</button>
+  </div>
 
 </div>
