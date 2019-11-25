@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Todo, TodosService} from "./TodosService";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -44,6 +45,13 @@ export class AppComponent implements OnInit {
     this.todosService.removeTodo(id)
       .subscribe(() => {
         this.todos = this.todos.filter(t => t.id !== id);
+      });
+  }
+
+  completeTodo(id: number) {
+    this.todosService.completeTodo(id)
+      .subscribe(todo => {
+        this.todos.find(t => t.id === todo.id).completed = todo.completed;
       });
   }
 }
