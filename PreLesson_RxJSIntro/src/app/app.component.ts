@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
-import {interval} from 'rxjs'; // позволяет создавать новые стримы
-import {} from 'rxjs/operators';
-
+import {interval, Subscription} from 'rxjs'; // позволяет создавать новые стримы
+//import {} from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +8,16 @@ import {} from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  sub: Subscription;
+
   constructor() {
     const intervalStream$ = interval(1000);
-    intervalStream$.subscribe((value) => {
+    this.sub = intervalStream$.subscribe((value) => {
       console.log(value);
     });
+  }
+
+  stop() {
+    this.sub.unsubscribe();
   }
 }
