@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {interval} from 'rxjs'; // позволяет создавать новые стримы
+import {} from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Services';
+  constructor() {
+    const intervalStream$ = interval(1000);
+    intervalStream$.subscribe((value) => {
+      console.log(value);
+    });
+  }
 }
