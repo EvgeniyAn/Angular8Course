@@ -64,8 +64,6 @@ export class TodosService {
   completeTodo(id: number): Observable<Todo> {
     return this.http.put<Todo>(`https://jsonplaceholder.typicode.com/posts/${id}`, {
       completed: true
-    }, {
-      // responseType: "text"
     });
   }
 }
