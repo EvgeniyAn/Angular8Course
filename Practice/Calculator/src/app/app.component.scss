@@ -1,0 +1,26 @@
+.container {
+  background: #97a5a4;
+  position: relative;
+  max-width: 400px;
+  border: 1px solid darkslateblue;
+  border-right: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .panel-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .btn-row {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-between;
+      max-width: 200px;
+    }
+  }
+}
